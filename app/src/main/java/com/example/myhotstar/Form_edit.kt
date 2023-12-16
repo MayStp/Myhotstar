@@ -40,6 +40,11 @@ class Form_edit : AppCompatActivity() {
         binding = ActivityFormEditBinding.inflate(layoutInflater)
         setContentView(binding.root) // Ganti dengan layout activity edit
 
+        binding.btnBcktoadmin.setOnClickListener {
+            val intent = Intent(this, Admincrud::class.java)
+            startActivity(intent)
+        }
+
         storageReference = FirebaseStorage.getInstance().reference.child("uploads")
 
         binding.btnPilihgambar.setOnClickListener {
@@ -74,14 +79,14 @@ class Form_edit : AppCompatActivity() {
                             .set(data, SetOptions.merge()) // Gunakan merge untuk memperbarui data
                             .addOnSuccessListener {
                                 Toast.makeText(this, "Data berhasil diperbarui di Firestore", Toast.LENGTH_SHORT).show()
-                                val fragmentManager = supportFragmentManager
-                                val fragView = Frag_view() // Ganti dengan nama Fragment yang menampilkan daftar film
-                                val fragmentTransaction = fragmentManager.beginTransaction()
-                                fragmentTransaction.replace(R.id.rv_movie, fragView) // Ganti dengan ID container Fragment yang ingin digantikan
-                                fragmentTransaction.commit()
+                                finish()
+                                val intent = Intent(this, ComingSoon::class.java) // Ganti Admincrud dengan nama Activity yang diinginkan
+                                startActivity(intent)
+                                // Opsional, jika ingin menutup Activity saat ini setelah beralih ke Activity baru
                             }.addOnFailureListener { e ->
                                 Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
                             }
+
                     }
                 } else {
                     // Jika tidak ada perubahan gambar, update data kecuali URL gambar

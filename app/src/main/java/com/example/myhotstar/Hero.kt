@@ -102,7 +102,7 @@ class Hero : AppCompatActivity() {
                 movieDao.insertMovies(movieEntities)
                 withContext(Dispatchers.Main) {
                     Log.d("FirebaseToLocal", "Penyalinan data selesai")
-                    setupFirestoreAdapter() // Tambahkan ini untuk menampilkan data dari Firestore setelah penyimpanan lokal selesai
+                    setupFirestoreAdapter()
                 }
             }
         }.addOnFailureListener { exception ->

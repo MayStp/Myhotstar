@@ -46,6 +46,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageButton
+                android:id="@+id/btn_bcktoadmin"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/image_view"
                 android:layout_width="150dp"
