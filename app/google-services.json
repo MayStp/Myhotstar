@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "618987903768",
+    "project_id": "myhotstar-dc429",
+    "storage_bucket": "myhotstar-dc429.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618987903768:android:582378cfa9146d06a61c6d",
+        "android_client_info": {
+          "package_name": "com.example.myhotstar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADJBd-bXvCde3N6mfPv_FI0fssgG3Wnh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

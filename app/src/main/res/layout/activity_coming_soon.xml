@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161616"
+    android:id="@+id/Frag_crud_container"
+    tools:context=".ComingSoon">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_bcktoadmincrud"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/movieffrom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Poster Start -->
+            <TextView
+                android:id="@+id/txt_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:text="Poster"
+                android:textColor="#F9FE3C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_view" /> <!-- Poster -->
+            <TextView
+                android:id="@+id/star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="35dp"
+                android:text="*"
+                android:textColor="#FF0C0C"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txt_poster"
+                app:layout_constraintTop_toBottomOf="@id/image_view" /> <!-- * -->
+            <Button
+                android:id="@+id/btn_pilihgambar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/st_inputimg"
+                android:text="Pilih Gambar"
+                android:textColor="#818140"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_poster" /> <!-- btn pilih gambar -->
+            <!-- Poster End -->
+
+            <!-- Judul Start -->
+            <TextView
+                android:id="@+id/txt_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Judul"
+                android:textColor="#F9FE3C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_pilihgambar" /> <!-- Judul -->
+            <TextView
+                android:id="@+id/star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="*"
+                android:textColor="#FF0C0C"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txt_judul"
+                app:layout_constraintTop_toBottomOf="@id/btn_pilihgambar" /> <!-- * -->
+            <EditText
+                android:id="@+id/input_judul"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="35dp"
+                android:hint="Masukkan judul"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#F9FE3C"
+                android:textColorHint="#818140"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_judul" /> <!-- Edit Judul -->
+            <!-- Judul End -->
+
+            <!-- Genre Start -->
+            <TextView
+                android:id="@+id/txt_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Genre"
+                android:textColor="#F9FE3C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_judul" /> <!-- Genre -->
+            <TextView
+                android:id="@+id/star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="*"
+                android:textColor="#FF0C0C"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txt_genre"
+                app:layout_constraintTop_toBottomOf="@id/input_judul" /> <!-- * -->
+            <EditText
+                android:id="@+id/input_genre"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="35dp"
+                android:hint="Masukkan genre"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#F9FE3C"
+                android:textColorHint="#818140"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_genre" /> <!-- Edit Genre -->
+            <!-- Genre End -->
+
+            <!-- Region -->
+            <TextView
+                android:id="@+id/txt_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Region"
+                android:textColor="#F9FE3C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_genre" /> <!-- Region -->
+            <TextView
+                android:id="@+id/star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="*"
+                android:textColor="#FF0C0C"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txt_region"
+                app:layout_constraintTop_toBottomOf="@id/input_genre" /> <!-- * -->
+            <EditText
+                android:id="@+id/input_region"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="35dp"
+                android:hint="Masukkan region"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#F9FE3C"
+                android:textColorHint="#818140"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_region" /> <!-- Edit Region -->
+            <!-- Region End -->
+
+            <!-- Deskripsi -->
+            <TextView
+                android:id="@+id/txt_deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Deskripsi"
+                android:textColor="#F9FE3C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_region" /> <!-- Deskripsi -->
+            <TextView
+                android:id="@+id/star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="*"
+                android:textColor="#FF0C0C"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txt_deskripsi"
+                app:layout_constraintTop_toBottomOf="@id/input_region" /> <!-- * -->
+            <EditText
+                android:id="@+id/input_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:hint="Masukkan deskripsi"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#F9FE3C"
+                android:textColorHint="#818140"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_deskripsi" /> <!-- Edit Deskripsi -->
+            <!-- Deskripsi End -->
+
+            <!-- Director -->
+            <TextView
+                android:id="@+id/txt_director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Director"
+                android:textColor="#F9FE3C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_deskripsi" /> <!-- Director -->
+            <TextView
+                android:id="@+id/star6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="*"
+                android:textColor="#FF0C0C"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txt_director"
+                app:layout_constraintTop_toBottomOf="@id/input_deskripsi" /> <!-- * -->
+            <EditText
+                android:id="@+id/input_director"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="35dp"
+                android:fontFamily="@font/poppins_bold"
+                android:hint="Masukkan director"
+                android:inputType="text"
+                android:textColor="#F9FE3C"
+                android:textColorHint="#818140"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_director"
+                tools:layout_editor_absoluteX="54dp" /> <!-- Edit Director -->
+            <!-- Director End -->
+
+            <ImageButton
+                android:id="@+id/btn_addnewmov"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_director" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

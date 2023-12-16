@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303"
+    tools:context=".Detailmov">
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardView"
+      android:layout_width="match_parent"
+      android:layout_height="220dp"
+      android:layout_margin="10dp"
+      app:cardCornerRadius="10dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/mov_poster_landscape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageButton
+        android:id="@+id/close_details"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/close" />
+
+
+  </androidx.cardview.widget.CardView>
+
+  <TextView
+      android:id="@+id/dt_movie_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+      android:layout_marginTop="20dp"
+      android:fontFamily="@font/poppins_bold"
+      android:text="$Movie_Name"
+      android:textColor="#FFFFFF"
+      android:textSize="30sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+  <TextView
+      android:id="@+id/dt_director"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:text="$director"
+      android:fontFamily="@font/poppins"
+      android:textColor="@color/white"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dt_movie_name" />
+
+  <TextView
+      android:id="@+id/dt_region"
+      android:layout_width="60dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="5dp"
+      android:text="$region"
+      android:fontFamily="@font/poppins"
+      android:textColor="@color/white"
+      app:layout_constraintStart_toEndOf="@+id/dt_director"
+      app:layout_constraintTop_toBottomOf="@+id/dt_movie_name" />
+
+  <ImageButton
+      android:id="@+id/btn_watchnow"
+      android:layout_width="match_parent"
+      android:layout_height="35dp"
+      android:layout_marginHorizontal="15dp"
+      android:layout_marginTop="20dp"
+      android:background="@null"
+      android:scaleType="centerCrop"
+      android:src="@drawable/watchnow"
+      app:layout_constraintTop_toBottomOf="@+id/dt_region"
+      tools:layout_editor_absoluteX="15dp" />
+
+  <TextView
+      android:id="@+id/dt_genre"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginTop="20dp"
+      android:text="$genre"
+      android:textColor="@color/white"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btn_watchnow" />
+
+  <TextView
+      android:id="@+id/deskripsi_film"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginHorizontal="20dp"
+      android:fontFamily="@font/poppins"
+      android:text="$loremipsumdolorsitamet"
+      android:textColor="#989898"
+      app:layout_constraintTop_toBottomOf="@+id/dt_genre"
+      tools:layout_editor_absoluteX="-108dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

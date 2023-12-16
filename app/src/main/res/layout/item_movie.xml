@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Item_movie">
+
+    <ImageView
+        android:id="@+id/iv_poster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- Poster -->
+
+    <TextView
+        android:id="@+id/tv_judul"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$judul"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20dp"
+        android:textColor="#E9EC6A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster" /> <!-- Judul-->
+
+    <TextView
+        android:id="@+id/tv_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="$region"
+        android:textColor="#E9EC6A"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_judul"
+        app:layout_goneMarginTop="40dp" /> <!-- Region -->
+
+    <TextView
+        android:id="@+id/tv_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins"
+        android:text="$genre"
+        android:textColor="#E9EC6A"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_region" /> <!-- Genre -->
+
+    <TextView
+        android:id="@+id/tv_director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$director"
+        android:textColor="#E9EC6A"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_genre"
+        app:layout_constraintTop_toBottomOf="@+id/tv_region" /> <!-- Director -->
+
+    <ScrollView
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_genre">
+
+        <TextView
+            android:id="@+id/tv_durasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="$deskripsi"
+            android:textAlignment="gravity"
+            android:textColor="#E9EC6A" /> <!-- Deskripsi -->
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

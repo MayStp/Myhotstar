@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logom"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- M Logo  -->
+
+    <TextView
+        android:id="@+id/movstar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alatsi"
+        android:text="Movstar"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logom" /> <!-- Movstar Text  -->
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movstar" /> <!-- SignUp Text  -->
+
+    <EditText
+        android:id="@+id/input_uname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:hint="Username"
+        android:textColorHint="#434343"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="20dp"
+        android:background="@drawable/input_st"
+        app:layout_constraintTop_toBottomOf="@+id/signup"
+        app:passwordToggleEnabled="true"
+        tools:layout_editor_absoluteX="20dp" /> <!-- Input Username  -->
+
+    <EditText
+        android:id="@+id/input_pass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/input_st"
+        android:hint="Password"
+        android:paddingStart="20dp"
+        android:textColorHint="#434343"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintTop_toBottomOf="@+id/input_uname"
+        tools:layout_editor_absoluteX="20dp" /> <!-- Input Password   -->
+
+    <Button
+        android:id="@+id/btn_singup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/submit_blue"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@+id/input_pass" /> <!-- btn signup   -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singup"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Already have an account? "
+            android:layout_centerVertical="true"
+            android:textColor="#6A6A6A" />
+
+        <TextView
+            android:id="@+id/gt_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/textView"
+            android:text="Sign In"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:textColor="#31D3F6" />
+    </RelativeLayout> <!-- Already have an account? Sign In  -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<!-- custom_edittext.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+
+    <stroke android:width="2dp"
+            android:color="#2D2D2D" />
+    <corners android:radius="20dp" />
+</shape>
