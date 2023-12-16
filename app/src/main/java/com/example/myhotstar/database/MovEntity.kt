@@ -3,9 +3,10 @@ package com.example.myhotstar.database
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "mmovies")
-data class MovieEntity(
-    @PrimaryKey val movid: String, // Gunakan ID dari Firebase sebagai primary key
+@Entity(tableName = "localmovies")
+data class MovEntity(
+    val id: String,
+    @PrimaryKey
     val judul: String,
     val deskripsi: String,
     val imageUrl: String,
@@ -13,6 +14,3 @@ data class MovieEntity(
     val director: String,
     val region: String,
 )
-
-
-

@@ -7,9 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.myhotstar.database.MovieEntity
+import com.example.myhotstar.database.MovEntity
 
-class MovieLocalAdapter(private val movieList: List<MovieEntity>) :
+class MovieLocalAdapter(private val movieList: List<MovEntity>) :
     RecyclerView.Adapter<MovieLocalAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
@@ -34,7 +34,7 @@ class MovieLocalAdapter(private val movieList: List<MovieEntity>) :
         private val tvJudul: TextView = itemView.findViewById(R.id.movie_name)
         private val ivImage: ImageView = itemView.findViewById(R.id.movie_poster)
 
-        fun bind(movie: MovieEntity) {
+        fun bind(movie: MovEntity) {
             tvJudul.text = movie.judul
 
             // Implementasi Glide untuk memuat gambar dari URL atau lokal jika ada

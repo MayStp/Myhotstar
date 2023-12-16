@@ -9,9 +9,9 @@ class MovieRepository(private val firestore: FirebaseFirestore, private val movi
         val query = firestore.collection("movies")
 
         query.get().addOnSuccessListener { documents ->
-            val movieList = mutableListOf<MovieEntity>()
+            val movieList = mutableListOf<MovEntity>()
             for (document in documents) {
-                val movie = document.toObject<MovieEntity>()
+                val movie = document.toObject<MovEntity>()
                 movieList.add(movie)
             }
             saveMoviesToLocalDatabase(movieList)
@@ -20,7 +20,7 @@ class MovieRepository(private val firestore: FirebaseFirestore, private val movi
         }
     }
 
-    private fun saveMoviesToLocalDatabase(movieList: List<MovieEntity>) {
+    private fun saveMoviesToLocalDatabase(movieList: List<MovEntity>) {
         movieDao.insertMovies(movieList)
     }
 
